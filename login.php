@@ -57,16 +57,16 @@
       <fieldset>
         <h3>Forgotten your password?</h3>
         <div class="form-control">
-          <label>email</label>
+          <label>Email</label>
           <input type="email" name="email">
           <?php
             if (isset($_GET["email"])) {
               switch ($_GET["email"]) {
                 case "missing":
-                  echo "<span class=\"error\">Please give us your email!</span>";
+                  echo "<span class=\"error\">Please enter your email.</span>";
                   break;
                 case "format":
-                  echo "<span class=\"error\">We do not have any record of this email in our database</span>";
+                  echo "<span class=\"error\">Format is incorrect.</span>";
                   break;
               }
             }

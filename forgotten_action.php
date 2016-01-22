@@ -3,7 +3,7 @@ session_start();
 include('classes/Database.class.php');
 include('classes/Mailer.class.php');
 
-if (!isset($_POST["email"])) {
+if (!isset($_POST["email"]) || $_POST["email"] === "") {
   header("Location: login.php?email=missing");
 }
 elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
