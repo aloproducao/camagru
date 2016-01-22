@@ -3,7 +3,7 @@
 header {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -35,4 +35,10 @@ footer {
     border-style: solid;
     padding-top: 15px;
     margin-top: 5px;
+}
+
+@media (max-width: 745px) {
+  .title {
+    font-size: 3.5em;
+  }
 }
